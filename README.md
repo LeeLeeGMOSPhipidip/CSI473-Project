@@ -3,10 +3,10 @@
 This repository contains the artefacts for the University of Botswana CSI473 Software Design team project.
 
 ## Team
-- Member 1
-- Member 2
-- Member 3
-- Member 4
+- Ronald - Group leader
+- Zanele
+- Kgotla
+- Leander
 
 ## Repository Structure
 
@@ -23,9 +23,11 @@ glossary.md    Project glossary
 ## Git Branches
 
 - `main` – Stable version
-- `develop` – Integration branch
-- `feature/...` – Individual features
-- `lab-01`, `lab-02`, etc. – Laboratory work
+- `staging` – group members contributions go here first
+- `leander` – leander's branch
+- `zanele/...` – zanele's branch
+- `ronald`, ronald's branch
+- `kgotla` – kgotla's branch
 
 ## Purpose
 
