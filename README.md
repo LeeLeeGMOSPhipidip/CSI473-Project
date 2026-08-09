@@ -25,8 +25,8 @@ glossary.md    Project glossary
 - `main` – Stable version
 - `staging` – group members contributions go here first
 - `leander` – leander's branch
-- `zanele/...` – zanele's branch
-- `ronald`, ronald's branch
+- `zanel` – zanele's branch
+- `ronald`- ronald's branch
 - `kgotla` – kgotla's branch
 
 ## Purpose
