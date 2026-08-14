@@ -7,6 +7,7 @@ This repository contains the artefacts for the University of Botswana CSI473 Sof
 - Zanele
 - Kgotla
 - Leander
+- Omatla
 
 ## Repository Structure
 
