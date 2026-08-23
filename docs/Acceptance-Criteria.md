@@ -24,6 +24,11 @@ Then when the owner receives the request , they approve it the system generates 
 The owner can reject the request  and notifty the renter with a reason (if provided).
 The system must automatically update the item's availability after a successful rental.
 
+Payment Confirmation
+The system must allow a rental transaction between a seller and a renter.
+Both seller and renter must be able to confirm that payment has been made.
+The system must record payment confirmation status for each transaction.
+
 Return and Due-Date Management
 A notification or a reminder should pop up when the two days rental date is due
 when the due date passes without a marked return, then the item status changes to "Overdue" and both parties, plus an optional system Admin escalation flag, are notified.
@@ -31,5 +36,15 @@ Owners must be able to confirm when an item has been returned and the item is re
 
 Ratings & Trust
 Once the rental is completed. the customer may give the owner rating of 1-5 stars
+
+Chat Function
+The system must provide a chat function between sellers and renters.
+Users must be able to send and receive messages in real time or near real time.
+Chat messages must be linked to a specific rental or item listing
+
+Administration
+Administrators must be able to manage user accounts (e.g., suspend or resolve issues).
+Administrators must be able to view system data and generate reports.
+Reports must include transaction data, user activity, and dispute-related information.
 
 
