@@ -16,11 +16,9 @@ Then the system shall update the transaction status to confirmed, record the pay
 
 Prevent Duplicate Booking of an Unavailable Item
 
-Scenario: Customer attempts to rent an already rented item
+Scenario: Customer attempts to rent an already rented or reserved item
 
-Given the customer is signed in and the selected item already has an active rental transaction
-When the customer attempts to click “Rent” and submit a rental request
-Then the system shall prevent the booking, display a message that the item is unavailable, and keep the existing rental transaction unchanged.
+Given the customer is signed in and browsing the catalog, the item should not appear in the availability list.
 
 Handling Payment Not Confirmed
 
