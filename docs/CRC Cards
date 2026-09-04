@@ -22,7 +22,7 @@ Rationale: Customer owns the decision to rent and must confirm transactions.
 Class: Item (Entity)
 •	KNOW: ItemID, Name, Condition, Description, RentalPrice, AvailableQuantity, Category.
 •	DO: Update availability, provide item details.
-•	PROTECT: Prevent quantity dropping below zero and enforce category assignment.
+•	PROTECT: Prevent quantity dropping below zero and against double booking during Pending/Reserved state.
 •	Collaborate: Owner (lists), Category (classification), RentalTransaction (usage).
 Rationale: Item owns its state and availability.
 
