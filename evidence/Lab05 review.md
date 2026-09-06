@@ -12,5 +12,7 @@ Plan for Final review:
 •	Add an acceptance criteria – When an item is pending/reserved and another customer searches for it, then it should not appear in the availability listings.
 •	Ensure all models are consistent with each other.
 
+Other Inconsistencies
+1) Our requirements say “The system shall allow customers and owners to rate each other after a completed rental transaction.”, if only one party confirms return, ratings could be allowed prematurely.
 
-
+Revision: Update requirement to: “Ratings are only enabled after both renter and seller confirm return.”
