@@ -12,7 +12,7 @@ Each item listing shall include:
   Available quantity
 The system shall require each item to be assigned to a category.
 The system shall provide a search function that allows users to find listed items.
-The storefront shall display only items that are currently available for rent.
+The storefront shall display only items that are currently available for rent excluding reserved items.
 The system shall allow the seller and renter to confirm that payment has been made.
 At the end of the rental period, the system shall require both the seller and renter to confirm that the item has been returned.
 The system shall allow sellers and renters to rate each other after a completed rental transaction.

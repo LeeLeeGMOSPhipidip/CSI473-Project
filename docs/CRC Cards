@@ -1,0 +1,63 @@
+Class: User (Boundary/Entity)
+•	KNOW: UB Email, Password, Name, Role (Customer or Owner).
+•	DO: Register, sign in/out, manage profile.
+•	PROTECT: Enforce valid UB email registration, prevent duplicate accounts.
+•	Collaborate: Administrator (account issues), RentalTransaction (when renting or listing).
+Rationale: User owns identity and authentication, so system enforces account validity.
+
+Class: Owner (Role of User, Entity)
+•	KNOW: OwnerID, owned Items.
+•	DO: Upload and list items, confirm payment (outside transaction), confirm item return, rate renters.
+•	PROTECT: Ensure item details are complete before listing; prevent listing unavailable items.
+•	Collaborate: Item (listing), RentalTransaction (records), Renter (partner), ChatMessage (communication).
+Rationale: Owner owns the knowledge of their items and must enforce listing accuracy.
+
+Class: Customer (Role of User, Entity)
+•	KNOW: CustomerID, rental history.
+•	DO: Search items, initiate rentals, confirm payment, confirm return, rate sellers.
+•	PROTECT: Ensure rental requests are valid and within availability.
+•	Collaborate: Item (rents), RentalTransaction (records), Customer, ChatMessage (communication).
+Rationale: Customer owns the decision to rent and must confirm transactions.
+
+Class: Item (Entity)
+•	KNOW: ItemID, Name, Condition, Description, RentalPrice, AvailableQuantity, Category.
+•	DO: Update availability, provide item details.
+•	PROTECT: Prevent quantity dropping below zero and enforce category assignment.
+•	Collaborate: Owner (lists), Category (classification), RentalTransaction (usage).
+Rationale: Item owns its state and availability.
+
+Class: Category (Entity)
+•	KNOW: CategoryID, CategoryName.
+•	DO: Classify items, allow filtering/search by category.
+•	PROTECT: Ensure each item belongs to exactly one category and prevent duplicate category names.
+•	Collaborate: Item (belongs to category).
+Rationale: Category owns classification knowledge, ensuring consistency.
+
+Class: RentalTransaction (Control + Entity)
+•	KNOW: TransactionID, StartDate, EndDate, Status, linked Seller, Renter, Item.
+•	DO: Create rental record, enforce due date, flag overdue, close transaction after return, coordinate notifications.
+•	PROTECT: Prevent duplicate rentals for the same item, enforce payment confirmation before activation, enforce return confirmation before rating.
+•	Collaborate: Owner, Customer, Item, Rating, ChatMessage, Administrator (for disputes).
+Rationale: RentalTransaction owns the lifecycle knowledge of rentals, so system coordinates rules, state changes, and exceptions.
+
+Class: Rating (Entity)
+•	KNOW: RatingID, Score, Comment.
+•	DO: Store feedback, link to transaction.
+•	PROTECT: Only allow ratings after confirmed return.
+•	Collaborate: RentalTransaction (context), Owner/Customer (author and subject).
+Rationale: Rating owns evaluation knowledge, enforcing timing rules.
+
+Class: ChatMessage (Boundary/Entity)
+•	KNOW: MessageID, Timestamp, Content.
+•	DO: Store and deliver communication.
+•	PROTECT: Ensure messages are tied to valid transactions, restrict messaging to transaction participants.
+•	Collaborate: Seller, Renter, RentalTransaction.
+Rationale: ChatMessage owns communication state, ensuring traceability.
+
+Class: Administrator (Control)
+•	KNOW: AdminID, privileges, system policies, dispute resolution rules.
+•	DO: Manage accounts, resolve disputes (late returns, damaged items, cancellations), generate reports.
+•	PROTECT: Enforce fairness and compliance with university/residence rules; deactivate accounts when necessary.
+•	Collaborate: User (accounts), RentalTransaction (disputes), Item (reports).
+Rationale: Administrator owns oversight responsibilities, ensuring compliance and system integrity.
+
