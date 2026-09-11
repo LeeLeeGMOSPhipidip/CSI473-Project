@@ -1,35 +1,57 @@
-1. Concurrent Login Load
-•	Stimulus: 50 students attempt to log in simultaneously during peak morning hours.
-•	Context: Authentication server connected to UB email system should support an average daily active users of 500.
-•	Response: System authenticates all users successfully within 5 seconds.
+# Remmogo Quality Scenarios
 
-2. Search Performance for Common Items
-•	Stimulus: A renter searches for “fridge.”
-•	Context: Marketplace catalog contains over 1,000 items across 10 categories.
-•	Response: Search results are displayed within 3 seconds.
+## QS-01 Concurrent Login Load
 
-3. Transaction Creation Speed
-•	Stimulus: A rental record is created when a renter confirms an item.
-•	Context: Database holds over 5,000 rental records, which includes item, renter, seller, and due date.
-•	Response: System stores and confirms the transaction within 2 seconds.
+**Quality attribute:** Performance  
+**Stimulus:** 50 Students attempt to sign in simultaneously during peak morning hours.  
+**Context:** The authentication service is operating normally and the system supports an average of 500 daily active users.  
+**Response:** The system authenticates valid users successfully.  
+**Measure:** All authentication responses are returned within 5 seconds.
 
-4. Real Time Chat Responsiveness
-•	Stimulus: A chat message is sent between renter and seller.
-•	Context: Both users are online, connected via campus Wi Fi.
-•	Response: Message is delivered and visible to the recipient in under 1 second.
+## QS-02 Search Performance for Common Items
 
-5. Administrative Report Generation
-•	Stimulus: Administrator generates a report of all rentals for the semester.
-•	Context: Report includes over 500 records with item details, renter/owner info, and status.
-•	Response: Report is produced and ready for download within 10 seconds.
+**Quality attribute:** Performance  
+**Stimulus:** A Customer searches for “fridge.”  
+**Context:** The Remmogo catalogue contains more than 1,000 items across 10 categories.  
+**Response:** The system searches the catalogue and displays matching available items.  
+**Measure:** Search results are displayed within 3 seconds.
 
-6. Overdue Rental Handling
-•	Stimulus: A rental period passes without return confirmation.
-•	Context: Transaction due date expired so system checks status at midnight daily.
-•	Response: System flags the rental as Overdue and sends notifications to both renter and seller within 1 minute.
+## QS-03 Rental Transaction Creation Speed
 
-7. System Recovery After Downtime
-•	Stimulus: Marketplace server restarts after an unexpected outage.
-•	Context: 200 active users were logged in before downtime and database contains over 10,000 records.
-•	Response: System restores service, reloads user sessions, and resumes pending transactions within 2 minutes of restart.
+**Quality attribute:** Performance  
+**Stimulus:** A Customer submits a valid request to rent an available item.  
+**Context:** The database contains more than 5,000 rental records, including item, Customer, Owner and due-date information.  
+**Response:** The system creates and confirms the pending rental transaction.  
+**Measure:** The transaction is stored and confirmed within 2 seconds.
 
+## QS-04 Real-Time Chat Responsiveness
+
+**Quality attribute:** Performance  
+**Stimulus:** A chat message is sent between a Customer and Owner.  
+**Context:** Both users are online and connected through the campus Wi-Fi network.  
+**Response:** The system stores and delivers the message to the recipient.  
+**Measure:** The message is visible to the recipient within 1 second.
+
+## QS-05 Administrative Report Generation
+
+**Quality attribute:** Performance  
+**Stimulus:** An Administrator requests a report of all rental transactions for the semester.  
+**Context:** The report contains more than 500 records with item details, Customer and Owner information, and rental status.  
+**Response:** The system generates the report and makes it available for download.  
+**Measure:** The report is ready within 10 seconds.
+
+## QS-06 Overdue Rental Handling
+
+**Quality attribute:** Reliability  
+**Stimulus:** A rental period passes without return confirmation.  
+**Context:** The transaction due date has expired and the system performs its scheduled daily status check.  
+**Response:** The system marks the rental transaction as Overdue and notifies the Customer and Owner.  
+**Measure:** The status is updated and notifications are issued within 1 minute of the scheduled check.
+
+## QS-07 System Recovery After Downtime
+
+**Quality attribute:** Recoverability  
+**Stimulus:** The Remmogo server restarts after an unexpected outage.  
+**Context:** Before the outage, 200 users were signed in and the database contained more than 10,000 records.  
+**Response:** The system restores service, reloads valid user sessions and resumes pending transactions.  
+**Measure:** Normal service is restored within 2 minutes.
