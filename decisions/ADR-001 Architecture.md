@@ -1,3 +1,6 @@
+Context
+Remmogo is a student rental marketplace that allows University of Botswana students to list items, request rentals, communicate with each other, track rental activities and generate reports. The system must protect item availability, support authenticated UB students, provide notifications and satisfy quality requirements.
+
 We chose to use a three-tier architecture consisting of:
 1. Presentation Layer
 Registration and login screens
