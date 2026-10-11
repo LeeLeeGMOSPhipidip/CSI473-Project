@@ -7,6 +7,13 @@ StudentRepository
 ListingRepository
 RentalRepository
 
+New flow:
+RentalService (interface to interact with functions and stored data)
+      v
+RentalRepository (contains queries for the database)
+      v
+Database 
+
 
 Positive Consequences
 Cleaner architecture.
