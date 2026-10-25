@@ -20,7 +20,7 @@
 body{
     margin:0;
     padding:20px;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:var(--bg);
     color:var(--text);
 }
@@ -32,11 +32,10 @@ body{
 
 .card{
     background:var(--card);
-    color:var(--text);
-    padding:20px;
-    border-radius:10px;
     border:1px solid var(--border);
-    margin-bottom:15px;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
 }
 
 input,
@@ -44,7 +43,6 @@ textarea,
 select{
     width:100%;
     padding:10px;
-    margin-top:5px;
     border:1px solid var(--border);
     border-radius:6px;
     color:var(--text);
@@ -55,8 +53,8 @@ button{
     padding:10px 18px;
     border:none;
     border-radius:6px;
-    cursor:pointer;
     color:white;
+    cursor:pointer;
 }
 
 .primary{
@@ -69,6 +67,30 @@ button{
 
 .danger{
     background:var(--danger);
+}
+
+.warning{
+    background:var(--warning);
+}
+
+.available{
+    color:var(--success);
+    font-weight:bold;
+}
+
+.unavailable{
+    color:var(--danger);
+    font-weight:bold;
+}
+
+.center{
+    text-align:center;
+}
+
+.header-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 button:focus,
