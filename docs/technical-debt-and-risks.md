@@ -64,6 +64,4 @@ The following risks require particular attention:
 
 **Late returns:** The system should record due dates and notify users when rental items become overdue.
 
-### 6. Conclusion
 
-Managing technical debt and project risks helps ensure that the Student Rental Marketplace remains secure, reliable, maintainable, and usable. The register should be reviewed regularly as the project develops.
