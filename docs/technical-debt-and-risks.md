@@ -3,7 +3,7 @@
 
 ### 1. Introduction
 
-This document identifies potential technical debt and project risks associated with developing and maintaining RREMMOGO.
+This document identifies potential technical debt and project risks associated with developing and maintaining REMMOGO.
 
 Technical debt refers to shortcuts or design decisions that may make development easier initially but could create additional maintenance work in the future.
 
