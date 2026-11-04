@@ -1,5 +1,5 @@
 # Technical Debt and Risk Register
-## RREMMOGO
+## REMMOGO
 
 ### 1. Introduction
 
